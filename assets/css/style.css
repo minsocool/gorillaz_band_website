@@ -1,0 +1,2369 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(/assets/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'TTTravels-Black';
+    src: url(/assets/fonts/TTTravels-Black.ttf);
+}
+
+@font-face {
+    font-family: 'TTTravels-Medium';
+    src: url(/assets/fonts/TTTravels-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'TTTravels-DemiBold';
+    src: url(/assets/fonts/TTTravels-DemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'TTTravels-Light';
+    src: url(/assets/fonts/TTTravels-Light.ttf);
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: calc(100%/2)
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-four {
+    float: left;
+    width: calc(100%/4)
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+/* #main {} */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 105px;
+    display: flex;
+    background-color: white;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav,
+.subNavStory {
+    list-style-type: none;
+}
+
+#nav>li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav li {
+    line-height: 105px;
+}
+
+#nav>li>a {
+    color: black;
+}
+
+#nav>li>img {
+    top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#nav li a {
+    text-decoration: none;
+    padding: 0 24px;
+
+    text-transform: capitalize;
+}
+
+#nav>li:hover .subNavStory {
+    display: inline-block;
+}
+
+#nav>li:hover>a {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#nav .subNavStory li:hover a {
+    background-color: #2A84FF;
+}
+
+#nav .subNavStory {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    top: 100%;
+    left: 0;
+}
+
+
+#nav .subNavStory a {
+    color: black;
+    padding: 0 12px;
+    line-height: 50px;
+    display: block;
+}
+
+#nav .nav-arrow-down-header {
+    font-size: 12px;
+}
+
+#header .english-button {
+    right: 125px;
+    position: absolute;
+}
+
+#header .char-english-button {
+    color: black;
+    line-height: 105px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#header .english-button:hover a {
+    color: #7C0000;
+}
+
+#header .vietnam-button:hover a {
+    color: #7C0000;
+}
+
+#header .vietnam-button {
+    right: 40px;
+    position: absolute;
+}
+
+#header .char-vietnam-button {
+    color: black;
+    line-height: 105px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#slider .text-navigation {
+    font-size: 18px;
+}
+
+#slider .text-navigation-icon {
+    margin-top: 15px;
+}
+
+#slider {
+    position: relative;
+    padding-top: 50%;
+    background: url('/assets/images/slider/slider3.png') top center /cover no-repeat;
+}
+
+
+
+
+.section-content {
+    width: 800px;
+    padding: 64px 0 112px;
+    margin: auto;
+}
+
+.section-slogan {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+#biography-page {
+    background-image: url('/assets/images/section/Biography-reality.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 60%;
+    background-color: black;
+    border: 10px solid #2A84FF;
+}
+
+#biographyTeam-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    align-items: center;
+}
+
+#biographyTeam-box .biographyTeam-image {
+    background-image: url('/assets/images/content/aboutBand.png');
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60%;
+    padding-top: 60%;
+    height: 100%;
+}
+
+.biographyTeam-text {
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.biographyTeam-text .about-band {
+    font-size: 20px;
+}
+
+.biographyTeam-text .about-band a {
+    color: white;
+    font-weight: bold;
+}
+
+.biographyTeam-text .text-band-member {
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.biographyTeam-text .list-member {
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.biographyTeam-text .list-member li {
+    padding: 10px;
+}
+
+.biographyTeam-text .list-member li:hover {
+    color: white;
+    background-color: #2A84FF;
+}
+
+.biographyTeam-text .about-band,
+.biographyTeam-text .text-band-member,
+.biographyTeam-text .list-member {
+    text-align: center;
+    list-style-type: none;
+}
+
+.member-personal .member2d {
+    transition: transform.5s
+}
+
+.member-personal .memberMucdoc {
+    transition: transform.5s
+}
+
+.member-personal .memberNoodle {
+    transition: transform.5s
+}
+
+.member-personal .memberRussel {
+    transition: transform.5s
+}
+
+/* Hover member */
+.member-personal .member2d:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.member-personal .memberMucdoc:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.member-personal .memberNoodle:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.member-personal .memberRussel:hover {
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.member-personal .member2d {
+    background-image: url('/assets/images/content/2D_BiographyMember.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 32%;
+    background-color: white;
+}
+
+.member-personal .memberMucdoc {
+    background-image: url('/assets/images/content/Mucdoc_BiographyMember.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 32%;
+    margin-top: 10px;
+}
+
+.member-personal .memberNoodle {
+    background-image: url('/assets/images/content/Noodle_BiographyMember.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 32%;
+    margin-top: 10px;
+}
+
+.member-personal .memberRussel {
+    background-image: url('/assets/images/content/Russel_BiographyMember.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 32%;
+    margin-top: 10px;
+}
+
+/*  Discography-page */
+#discography-page {
+    background-image: url('/assets/images/section/Discography.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 65%;
+    border: 10px solid black;
+}
+
+/* Disco Gorillaz */
+#discography-gorillaz {
+    width: 100%;
+    height: 1000px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#discography-gorillaz .discography-gorillaz-boxImage,
+#discography-gorillaz .discography-gorillaz-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+.discography-gorillaz-boxImage img {
+    width: 100%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .discography-gorillaz-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+    color: black;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .discography-gorillaz-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .discography-gorillaz-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-gorillaz .discography-gorillaz-boxText .discography-gorillaz-boxButton:hover {
+    background-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+
+#discography-gorillaz .discography-gorillaz-boxText .year {
+    font-size: 180px;
+    font-family: 'TTTravels-Light';
+    position: absolute;
+    color: white;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+/*  Demon Days */
+#discography-demonDays {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #012D43;
+}
+
+#discography-demonDays .discography-demonDays-boxImage,
+#discography-demonDays .discography-demonDays-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+.discography-demonDays-boxImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discography-demonDays-boxImage img {
+    width: 65%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+#discography-demonDays .discography-demonDays-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+#discography-demonDays .discography-demonDays-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-demonDays .discography-demonDays-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-demonDays .discography-demonDays-boxText .discography-demonDays-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 14px;
+}
+
+#discography-demonDays .discography-demonDays-boxText .discography-demonDays-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: none;
+}
+
+#discography-demonDays .discography-demonDays-boxText .discography-demonDays-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#discography-demonDays .discography-demonDays-boxText .discography-demonDays-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-demonDays .discography-demonDays-boxText .year {
+    font-size: 180px;
+    color: #012D43;
+    font-family: 'TTTravels-Light';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #CE7828;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*  Plastic Beach */
+#discography-plasticBeach {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #C1D0E6;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxImage,
+#discography-plasticBeach .discography-plasticBeach-boxText {
+    width: 50%;
+    height: 100%;
+
+}
+
+.discography-plasticBeach-boxImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discography-plasticBeach-boxImage img {
+    width: 65%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    color: black;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .discography-plasticBeach-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 14px;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .discography-plasticBeach-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .discography-plasticBeach-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .discography-plasticBeach-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-plasticBeach .discography-plasticBeach-boxText .year {
+    font-size: 180px;
+    color: #C1D0E6;
+    font-family: 'TTTravels-Light';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #012D43;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*  The Fall */
+#discography-theFall {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #B1846E;
+}
+
+#discography-theFall .discography-theFall-boxImage,
+#discography-theFall .discography-theFall-boxText {
+    width: 50%;
+    height: 100%;
+
+}
+
+.discography-theFall-boxImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discography-theFall-boxImage img {
+    width: 65%;
+    /* or any custom size */
+    height: 100%;
+    object-fit: contain;
+}
+
+#discography-theFall .discography-theFall-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    color: black;
+}
+
+#discography-theFall .discography-theFall-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-theFall .discography-theFall-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-theFall .discography-theFall-boxText .discography-theFall-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+#discography-theFall .discography-theFall-boxText .discography-theFall-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-theFall .discography-theFall-boxText .discography-theFall-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#discography-theFall .discography-theFall-boxText .discography-theFall-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-theFall .discography-theFall-boxText .year {
+    font-size: 180px;
+    color: #B1846E;
+    font-family: 'TTTravels-Light';
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #012D43;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* Disco Humanz */
+#discography-humanz {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #2A84FF;
+}
+
+#discography-humanz .discography-humanz-boxImage,
+#discography-humanz .discography-humanz-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+/* .discography-humanz-boxImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 200px;
+} */
+.discography-humanz-boxImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.discography-humanz-boxImage .discography2017 {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+.discography-humanz-boxImage .discography2017-album {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    border: 10px solid black;
+    background-color: black;
+
+}
+
+#discography-humanz .discography-humanz-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+
+#discography-humanz .discography-humanz-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-humanz .discography-humanz-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-humanz .discography-humanz-boxText .discography-humanz-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+#discography-humanz .discography-humanz-boxText .discography-humanz-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-humanz .discography-humanz-boxText .discography-humanz-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#discography-humanz .discography-humanz-boxText .discography-humanz-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-humanz .discography-humanz-boxText .year {
+    font-size: 180px;
+    font-family: 'TTTravels-Light';
+    position: absolute;
+    color: #2A84FF;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #B1846E;
+}
+
+/* Disco The Now Now */
+#discography-nowNow {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+#discography-nowNow .discography-nowNow-boxImage,
+#discography-nowNow .discography-nowNow-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+/* .discography-humanz-boxImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 200px;
+} */
+.discography-nowNow-boxImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.discography-nowNow-boxImage .discography2018 {
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+.discography-nowNow-boxImage .discography2018-album {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    border: 10px solid black;
+    background-color: black;
+
+}
+
+#discography-nowNow .discography-nowNow-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+#discography-nowNow .discography-nowNow-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-nowNow .discography-nowNow-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-nowNow .discography-nowNow-boxText .discography-nowNow-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 14px;
+}
+
+#discography-nowNow .discography-nowNow-boxText .discography-nowNow-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: none;
+}
+
+#discography-nowNow .discography-nowNow-boxText .discography-nowNow-boxButton:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#discography-nowNow .discography-nowNow-boxText .discography-nowNow-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: underline;
+}
+
+#discography-nowNow .discography-nowNow-boxText .year {
+    font-size: 180px;
+    font-family: 'TTTravels-Light';
+    position: absolute;
+    color: black;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+
+/* Disco Song Machine */
+#discography-songMachine {
+    width: 100%;
+    height: 900px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: #C23E09;
+}
+
+#discography-songMachine .discography-songMachine-boxImage,
+#discography-songMachine .discography-songMachine-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+/* .discography-humanz-boxImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 200px;
+} */
+.discography-songMachine-boxImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.discography-songMachine-boxImage .discography2020 {
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+.discography-songMachine-boxImage .discography2020-album {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    border: 8px solid black;
+    border-radius: 20px;
+    background-color: black;
+}
+
+#discography-songMachine .discography-songMachine-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+
+#discography-songMachine .discography-songMachine-boxText .disco-name {
+    font-size: 100px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-songMachine .discography-songMachine-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-songMachine .discography-songMachine-boxText .discography-songMachine-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+#discography-songMachine .discography-songMachine-boxText .discography-songMachine-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-songMachine .discography-songMachine-boxText .discography-songMachine-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#discography-songMachine .discography-songMachine-boxText .discography-songMachine-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-songMachine .discography-songMachine-boxText .year {
+    font-size: 180px;
+    font-family: 'TTTravels-Light';
+    position: absolute;
+    color: #C23E09;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #012D43;
+}
+
+
+/* Disco Cracker IsLand */
+#discography-crackerIsland {
+    width: 100%;
+    height: 1000px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxImage,
+#discography-crackerIsland .discography-crackerIsland-boxText {
+    width: 50%;
+    height: 100%;
+}
+
+/* .discography-crackerIsland-boxImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 200px;
+} */
+.discography-crackerIsland-boxImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.discography-crackerIsland-boxImage .discography2023 {
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 100px;
+    position: absolute;
+}
+
+.discography-crackerIsland-boxImage .discography2023-album {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    right: 100px;
+    bottom: 30px;
+    border: 8px solid black;
+    border-radius: 20px;
+    background-color: black;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    position: relative;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .disco-name {
+    font-size: 90px;
+    font-family: 'TTTravels-Black';
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .disco-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .discography-crackerIsland-boxButton {
+    width: 150px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 14px;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .discography-crackerIsland-boxButton a {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: black;
+    text-decoration: none;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .discography-crackerIsland-boxButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+#discography-crackerIsland .discography-crackerIsland-boxText .discography-crackerIsland-boxButton a:hover {
+    line-height: 55px;
+    padding: 0px 33px;
+    color: white;
+    text-decoration: underline;
+}
+
+#discography-crackerIsland .discography-crackerIsland-boxText .year {
+    font-size: 180px;
+    font-family: 'TTTravels-Light';
+    position: absolute;
+    color: white;
+    right: 0;
+    bottom: 0;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #012D43;
+}
+
+
+/*  Story */
+#story-page {
+    background-image: url('/assets/images/section/Story.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 70%;
+    background-color: black;
+    border: 20px solid black;
+}
+
+/* phase 1  */
+#phase1 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase1 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase1 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase1 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase1 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase1 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase1 .boxText-Story .chapter {
+    font-size: 90px;
+    text-align: justify;
+}
+
+#phase1 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase1 .story-description1 .description1 {
+    margin-right: 40px;
+}
+
+#phase1 .story-description1 img {
+    width: 150px;
+    height: 150px;
+}
+
+#phase1 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase1 .story-description2 img {
+    width: 150px;
+    height: 150px;
+    margin-right: 40px;
+}
+
+#phase1 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase1 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase1 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+#phase1 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* phase 2  */
+#phase2 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase2 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase2 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase2 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase2 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase2 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase2 .boxText-Story .chapter {
+    font-size: 90px;
+    text-align: justify;
+}
+
+#phase2 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase2 .story-description1 .description1 {} */
+
+#phase2 .story-description1 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+}
+
+#phase2 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase2 .story-description2 .description2 {
+    margin-right: 150px;
+}
+
+#phase2 .story-description2 img {
+    width: 150px;
+    height: 150px;
+}
+
+#phase2 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase2 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phase2 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase2 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
+
+/* phase 3  */
+#phase3 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase3 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase3 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase3 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase3 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase3 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase3 .boxText-Story .chapter {
+    font-size: 75px;
+    text-align: justify;
+}
+
+#phase3 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase3 .story-description1 .description1 {} */
+
+#phase3 .story-description1 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+}
+
+#phase3 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase3 .story-description2 .description2 {
+    margin-right: 100px;
+}
+
+#phase3 .story-description2 img {
+    width: 150px;
+    height: 150px;
+}
+
+#phase3 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase3 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#phase3 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase3 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+/* phase 4  */
+#phase4 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase4 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase4 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase4 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase4 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase4 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase4 .boxText-Story .chapter {
+    font-size: 89px;
+    text-align: justify;
+}
+
+#phase4 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase4 .story-description1 .description1 {} */
+
+#phase4 .story-description1 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+    border: 25px solid #150C0C;
+}
+
+#phase4 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase4 .story-description2 .description2 {
+    margin-right: 100px;
+}
+
+
+#phase4 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase4 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phase4 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase4 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+/* phase 5  */
+#phase5 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase5 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase5 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase5 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase5 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase5 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase5 .boxText-Story .chapter {
+    font-size: 74px;
+    text-align: justify;
+}
+
+#phase5 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase5 .story-description1 .description1 {} */
+
+#phase5 .story-description1 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+    border: 10px solid black;
+}
+
+#phase5 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase5 .story-description2 .description2 {
+    margin-right: 100px;
+}
+
+
+#phase5 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase5 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phase5 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase5 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+/* phase 6  */
+#phase6 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase6 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase6 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase6 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase6 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase6 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase6 .boxText-Story .chapter {
+    font-size: 95px;
+    text-align: justify;
+}
+
+#phase6 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase6 .story-description1 .description1 {} */
+
+#phase6 .story-description1 img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+}
+
+#phase6 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase6 .story-description2 .description2 {
+    margin-right: 60px;
+}
+
+#phase6 .story-description2 img {
+    width: 180px;
+    height: 180px;
+}
+
+#phase6 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase6 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phase6 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase6 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+/* phase 7  */
+#phase7 {
+    width: 100%;
+    height: 1100px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px;
+}
+
+#phase7 .boxYear-Story {
+    display: inline-block;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+}
+
+#phase7 .boxYear-Story p {
+    color: white;
+    font-size: 120px;
+    font-family: 'TTTravels-Medium', sans-serif;
+}
+
+#phase7 .boxImage-Story {
+    width: 35%;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+#phase7 .boxImage-Story img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#phase7 .boxText-Story {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    color: white;
+    text-align: left;
+    justify-content: center;
+}
+
+#phase7 .boxText-Story .chapter {
+    font-size: 95px;
+    text-align: justify;
+}
+
+#phase7 .story-description1 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* #phase7 .story-description1 .description1 {} */
+
+#phase7 .story-description1 img {
+    width: 250px;
+    height: 250px;
+    margin-right: 40px;
+}
+
+#phase7 .story-description2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#phase7 .story-description2 .description2 {
+    margin-right: 60px;
+}
+
+#phase7 .story-description2 img {
+    width: 200px;
+    height: 200px;
+}
+
+#phase7 .boxText-Story .readmoreButton-Story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 70px;
+    border: 3px solid white;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#phase7 .boxText-Story .readmoreButton-Story:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#phase7 .boxText-Story .readmoreButton-Story a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    display: inline-block;
+    padding: 1px 30px;
+}
+
+#phase7 .boxText-Story .readmoreButton-Story a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Tour Section */
+
+.tour-section {
+    background-color: black;
+}
+
+.tour-section .ticket-list {
+    background-color: white;
+    margin-top: 30px;
+}
+
+.ticket-list li {
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 16px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: white;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 6px;
+}
+
+/* Poster Ticket */
+.posterTicket-list {
+    margin-top: 32px;
+}
+
+.posterTicket-item {
+    width: calc(100%/3);
+}
+
+.posterImg {
+    width: 100%;
+    display: block;
+}
+
+.posterImg:hover {
+    opacity: 0.6;
+}
+
+.poster-content {
+    background-color: white;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.poster-heading {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.poster-description,
+.poster-time {
+    margin-top: 15px;
+}
+
+.poster-time {
+    opacity: 0.7;
+}
+
+.poster-description {
+    line-height: 1.4;
+}
+
+.poster-buy-btn {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 17px;
+    display: inline-block;
+    margin-top: 16px;
+}
+
+.poster-buy-btn:hover {
+    color: white;
+    background-color: #ccc;
+}
+
+/* Modal  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container {
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 1s;
+}
+
+.modal .modal-header {
+    background-color: black;
+    color: white;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.modal .modal-close {
+    position: absolute;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.modal .modal-close:hover {
+    opacity: 0.8;
+}
+
+.modal .modal-body {
+    padding: 16px;
+}
+
+.modal .modal-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.modal .modal-input {
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.modal .buy-tickets {
+    width: 100%;
+    background-color: lime;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.modal .buy-tickets:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a {
+    color: cyan;
+}
+
+
+/* keyframes tạo chuyển động liên tiếp của hình ảnh tĩnh   */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  Store page */
+
+#store {
+    background-image: url('/assets/images/section/Store.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 50%;
+    position: relative;
+}
+
+
+#store .logo-store img {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+#store .btnStore {
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    border: 10px solid black;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+#store .btnStore:hover {
+    background-color: cyan;
+    color: black;
+    cursor: pointer;
+}
+
+/* Video form */
+.video-section video {
+    width: 100%;
+}
+
+/*  Member List For Bio */
+#members-list {
+    margin-top: 48px;
+}
+
+#members-list .member-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#members-list .member-name {
+    font-size: 40px;
+    font-family: 'TTTravels-DemiBold';
+    text-decoration: none;
+    color: black;
+}
+
+#members-list .member-avatar {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: transform.5s
+}
+
+#members-list .member-avatar:hover {
+    opacity: 0.6;
+    transform: scale(1.3);
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+
+}
+
+#footer .socials-list a {
+    font-size: 24px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a :hover,
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright {
+    font-size: 50px;
+    margin-top: 15px;
+    color: #2A84FF;
+}
+
+#footer .copyright a {
+    color: #2A84FF
+}
